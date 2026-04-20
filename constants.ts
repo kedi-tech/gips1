@@ -25,7 +25,21 @@ export const IMAGES = {
   // Specifics
   SERVICES_HERO_BG: "/hero.jpeg",
   INDUSTRIAL_IMG: "/we.jpeg",
-  QUOTE_SIDEBAR_IMG: "/ceo.jpeg"
+  QUOTE_SIDEBAR_IMG: "/ceo.jpeg",
+
+  // Team / Services images
+  SERVICE_SECURITY: "/images/our_service_security.png",
+  SECURITY_AGENT: "/images/security_agent.png",
+  SECURITY_DOG: "/images/security_dog.png",
+  SURVEILLANCE_VIDEO: "/images/surveillance_video.png",
+
+  // Partner logos
+  PARTNER_BSIC: "/images/bsic.png",
+  PARTNER_CBG: "/images/cbg.png",
+  PARTNER_DYNAMIC_MINING: "/images/dynamic mining.png",
+  PARTNER_ECOBANK: "/images/ecobank.jpg",
+  PARTNER_FYIA: "/images/fyia.png",
+  PARTNER_GUITER: "/images/guiter.png",
 };
 
 export const SERVICE_OPTIONS = [

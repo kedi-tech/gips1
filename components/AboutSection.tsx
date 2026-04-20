@@ -17,7 +17,7 @@ export const AboutSection: React.FC = () => {
               </h2>
             </div>
             <p className="text-[#616f89] text-lg leading-relaxed">
-              GIPS s'engage à fournir des services de sécurité de premier ordre en Guinée, alliant expertise locale et standards internationaux pour garantir votre tranquillité d'esprit. Notre personnel est rigoureusement formé pour répondre aux défis les plus complexes.
+              Fondée en 2017, G.I.P.S (Guinea International Private Security) est le fruit d'un partenariat entre la jeunesse guinéenne et la diaspora française, dédiée à fournir des services de sécurité fiables et professionnels pour protéger biens et personnes à travers la Guinée.
             </p>
             <div className="grid sm:grid-cols-2 gap-6">
               <div className="p-5 rounded-xl border border-charcoal/10 bg-white flex items-start gap-4 shadow-sm">
@@ -57,8 +57,8 @@ export const AboutSection: React.FC = () => {
               <div className="absolute bottom-6 left-6 right-6 p-6 bg-white/95 backdrop-blur rounded-xl shadow-lg border-l-4 border-guinea-yellow">
                 <div className="flex justify-between items-center">
                   <div>
-                    <p className="text-primary font-black text-3xl leading-none">15+</p>
-                    <p className="text-charcoal/60 text-[10px] font-bold uppercase tracking-wider">Années</p>
+                    <p className="text-primary font-black text-3xl leading-none">2017</p>
+                    <p className="text-charcoal/60 text-[10px] font-bold uppercase tracking-wider">Fondée</p>
                   </div>
                   <div className="w-px h-10 bg-charcoal/10"></div>
                   <div>

@@ -61,8 +61,8 @@ export const ContactView: React.FC = () => {
                 </div>
                 <h3 className="text-sm font-bold text-[#111318]">Siège Social</h3>
                 <p className="mt-2 text-sm leading-relaxed text-[#616f89]">
-                  Kamsar, Boké<br />
-                  République de Guinée
+                  Sonfonia, Conakry<br />
+                  (En face du Centre de Santé de Sonfonia)
                 </p>
               </div>
               <div className="rounded-xl border border-guinea-yellow/20 bg-white p-6 shadow-sm transition-transform hover:-translate-y-1">
@@ -71,8 +71,9 @@ export const ContactView: React.FC = () => {
                 </div>
                 <h3 className="text-sm font-bold text-[#111318]">Téléphone</h3>
                 <p className="mt-2 text-sm leading-relaxed text-[#616f89]">
-                  +224 620 41 42 26<br />
-                  Appel direct 24h/24
+                  +224 628 75 18 75<br />
+                  +224 621 93 99 06<br />
+                  +224 620 41 42 26
                 </p>
               </div>
             </div>
@@ -98,9 +99,9 @@ export const ContactView: React.FC = () => {
               <div className="bg-[#f0f2f4] p-4 flex items-center justify-between border-b border-[#dbdfe6]">
                 <div className="flex items-center gap-2">
                   <span className="material-symbols-outlined text-primary">explore</span>
-                  <span className="text-sm font-bold text-[#111318]">Notre zone d'intervention : Kamsar</span>
+                  <span className="text-sm font-bold text-[#111318]">Notre siège : Sonfonia, Conakry</span>
                 </div>
-                <span className="text-xs font-medium text-[#616f89]">Boké, Guinée</span>
+                <span className="text-xs font-medium text-[#616f89]">Conakry, Guinée</span>
               </div>
               <div className="relative h-[300px] w-full bg-[#f0f2f4]">
                 <div 

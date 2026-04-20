@@ -53,14 +53,16 @@ export const Footer: React.FC<FooterProps> = ({ setView }) => {
               <h4 className="font-bold mb-4 text-guinea-yellow">Contact</h4>
               <ul className="space-y-2 text-white/60 text-sm">
                 <li><button onClick={() => setView?.('contact')} className="hover:text-white transition-colors">Nous contacter</button></li>
-                <li className="flex items-center gap-2"><span className="material-symbols-outlined text-xs">call</span> Conakry, Guinée</li>
-                <li className="flex items-center gap-2"><span className="material-symbols-outlined text-xs">mail</span> contact@gips-gn.com</li>
+                <li className="flex items-center gap-2"><span className="material-symbols-outlined text-xs">location_on</span> Sonfonia, Conakry, Guinée</li>
+                <li className="flex items-center gap-2"><span className="material-symbols-outlined text-xs">call</span> +224 628 75 18 75</li>
+                <li className="flex items-center gap-2"><span className="material-symbols-outlined text-xs">mail</span> contact@gips-guinee.com</li>
+                <li className="flex items-center gap-2"><span className="material-symbols-outlined text-xs">language</span> www.gips-guinee.com</li>
               </ul>
             </div>
           </div>
         </div>
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
-          <p className="text-white/40 text-xs">© 2024 Guinea International Private Security (GIPS). Tous droits réservés.</p>
+          <p className="text-white/40 text-xs">© 2017–2025 Guinea International Private Security (GIPS) — Sonfonia, Conakry. Tous droits réservés.</p>
           <div className="flex gap-6">
             <a className="text-white/60 hover:text-white transition-colors" href="#"><span className="material-symbols-outlined">social_leaderboard</span></a>
             <a className="text-white/60 hover:text-white transition-colors" href="#"><span className="material-symbols-outlined">public</span></a>

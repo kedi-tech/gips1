@@ -15,10 +15,6 @@ export const CEOSection: React.FC = () => {
                 className="w-full h-auto object-cover aspect-[3/4]" 
                 src={IMAGES.CEO_HOME} 
               />
-              <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/80 to-transparent">
-                <h3 className="text-white text-2xl font-black">PDG M. Condé Souleymane</h3>
-                <p className="text-guinea-yellow font-bold uppercase tracking-widest text-sm">Directeur Général de GIPS</p>
-              </div>
             </div>
           </div>
           <div className="flex flex-col gap-8 order-1 lg:order-2">

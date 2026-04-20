@@ -8,7 +8,7 @@ export const ServicesView: React.FC = () => {
       <div className="w-full">
         <div className="p-4 md:px-20 lg:px-40 py-10">
           <div className="flex min-h-[450px] flex-col gap-6 bg-cover bg-center bg-no-repeat rounded-2xl items-center justify-center p-8 text-center border border-primary/10 relative overflow-hidden shadow-2xl" 
-               style={{ backgroundImage: `linear-gradient(rgba(17, 82, 212, 0.75) 0%, rgba(10, 14, 23, 0.9) 100%), url("${IMAGES.SERVICES_HERO_BG}")` }}>
+               style={{ backgroundImage: `linear-gradient(rgba(17, 82, 212, 0.75) 0%, rgba(10, 14, 23, 0.9) 100%), url("${IMAGES.SERVICE_SECURITY}")` }}>
             <div className="z-10 flex flex-col gap-4 max-w-3xl">
               <span className="bg-white/20 backdrop-blur-md text-white text-xs font-bold uppercase tracking-[0.2em] px-4 py-1.5 rounded-full self-center border border-white/20">Elite Security Solutions</span>
               <h1 className="text-white text-4xl md:text-7xl font-black leading-tight tracking-tight">
@@ -155,6 +155,102 @@ export const ServicesView: React.FC = () => {
                 <li className="flex items-center gap-3 text-sm text-slate-700">
                   <span className="material-symbols-outlined text-primary text-xl">check_circle</span>
                   Coordinated tactical teams
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="group flex flex-col gap-4 rounded-2xl border border-primary/10 bg-white p-8 hover:border-primary/40 hover:shadow-2xl transition-all duration-500">
+            <div className="size-16 flex items-center justify-center bg-primary/10 text-primary rounded-2xl group-hover:bg-primary group-hover:text-white transition-all duration-300">
+              <span className="material-symbols-outlined text-4xl">local_fire_department</span>
+            </div>
+            <div className="flex flex-col gap-3">
+              <h4 className="text-[#111318] text-2xl font-extrabold leading-tight">Sécurité Incendie</h4>
+              <p className="text-slate-600 text-sm leading-relaxed">Protection des bâtiments et installations contre les incendies avec une intervention rapide et efficace.</p>
+              <ul className="flex flex-col gap-3 mt-4">
+                <li className="flex items-center gap-3 text-sm text-slate-700">
+                  <span className="material-symbols-outlined text-primary text-xl">check_circle</span>
+                  Agents formés aux situations d'urgence
+                </li>
+                <li className="flex items-center gap-3 text-sm text-slate-700">
+                  <span className="material-symbols-outlined text-primary text-xl">check_circle</span>
+                  Prévention et détection précoce
+                </li>
+                <li className="flex items-center gap-3 text-sm text-slate-700">
+                  <span className="material-symbols-outlined text-primary text-xl">check_circle</span>
+                  Intervention immédiate 24h/24
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="group flex flex-col gap-4 rounded-2xl border border-primary/10 bg-white p-8 hover:border-primary/40 hover:shadow-2xl transition-all duration-500">
+            <div className="size-16 flex items-center justify-center bg-primary/10 text-primary rounded-2xl group-hover:bg-primary group-hover:text-white transition-all duration-300">
+              <span className="material-symbols-outlined text-4xl">warehouse</span>
+            </div>
+            <div className="flex flex-col gap-3">
+              <h4 className="text-[#111318] text-2xl font-extrabold leading-tight">Gardiennage d'Entrepôts</h4>
+              <p className="text-slate-600 text-sm leading-relaxed">Surveillance et contrôle d'accès pour les entrepôts et installations industrielles contre les vols et vandalisme.</p>
+              <ul className="flex flex-col gap-3 mt-4">
+                <li className="flex items-center gap-3 text-sm text-slate-700">
+                  <span className="material-symbols-outlined text-primary text-xl">check_circle</span>
+                  Contrôle des entrées et sorties
+                </li>
+                <li className="flex items-center gap-3 text-sm text-slate-700">
+                  <span className="material-symbols-outlined text-primary text-xl">check_circle</span>
+                  Prévention des vols et actes de vandalisme
+                </li>
+                <li className="flex items-center gap-3 text-sm text-slate-700">
+                  <span className="material-symbols-outlined text-primary text-xl">check_circle</span>
+                  Surveillance des flux de marchandises
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="group flex flex-col gap-4 rounded-2xl border border-primary/10 bg-white p-8 hover:border-primary/40 hover:shadow-2xl transition-all duration-500">
+            <div className="size-16 flex items-center justify-center bg-primary/10 text-primary rounded-2xl group-hover:bg-primary group-hover:text-white transition-all duration-300">
+              <span className="material-symbols-outlined text-4xl">construction</span>
+            </div>
+            <div className="flex flex-col gap-3">
+              <h4 className="text-[#111318] text-2xl font-extrabold leading-tight">Sûreté des Chantiers (BTP)</h4>
+              <p className="text-slate-600 text-sm leading-relaxed">Protection complète des chantiers de construction contre le vol, vandalisme et accès non autorisés.</p>
+              <ul className="flex flex-col gap-3 mt-4">
+                <li className="flex items-center gap-3 text-sm text-slate-700">
+                  <span className="material-symbols-outlined text-primary text-xl">check_circle</span>
+                  Agents formés aux défis BTP
+                </li>
+                <li className="flex items-center gap-3 text-sm text-slate-700">
+                  <span className="material-symbols-outlined text-primary text-xl">check_circle</span>
+                  Gestion des urgences sur site
+                </li>
+                <li className="flex items-center gap-3 text-sm text-slate-700">
+                  <span className="material-symbols-outlined text-primary text-xl">check_circle</span>
+                  Solutions adaptées à chaque chantier
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="group flex flex-col gap-4 rounded-2xl border border-primary/10 bg-white p-8 hover:border-primary/40 hover:shadow-2xl transition-all duration-500">
+            <div className="size-16 flex items-center justify-center bg-primary/10 text-primary rounded-2xl group-hover:bg-primary group-hover:text-white transition-all duration-300">
+              <span className="material-symbols-outlined text-4xl">gps_fixed</span>
+            </div>
+            <div className="flex flex-col gap-3">
+              <h4 className="text-[#111318] text-2xl font-extrabold leading-tight">Contrôle par Tracking GPS</h4>
+              <p className="text-slate-600 text-sm leading-relaxed">Surveillance et contrôle des véhicules en temps réel pour sécuriser vos flottes et installations.</p>
+              <ul className="flex flex-col gap-3 mt-4">
+                <li className="flex items-center gap-3 text-sm text-slate-700">
+                  <span className="material-symbols-outlined text-primary text-xl">check_circle</span>
+                  Suivi GPS en temps réel
+                </li>
+                <li className="flex items-center gap-3 text-sm text-slate-700">
+                  <span className="material-symbols-outlined text-primary text-xl">check_circle</span>
+                  Contrôle d'accès des véhicules
+                </li>
+                <li className="flex items-center gap-3 text-sm text-slate-700">
+                  <span className="material-symbols-outlined text-primary text-xl">check_circle</span>
+                  Rapports de surveillance détaillés
                 </li>
               </ul>
             </div>
