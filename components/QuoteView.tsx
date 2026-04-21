@@ -13,7 +13,12 @@ interface FormErrors {
 export const QuoteView: React.FC<QuoteViewProps> = ({ onBack }) => {
   const [step, setStep] = useState(1);
   const [errors, setErrors] = useState<FormErrors>({});
+  const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState('');
+  const [success, setSuccess] = useState(false);
   const totalSteps = 3;
+
+  const WEBHOOK_URL = 'https://n8n.kedi-tech.com/webhook/9f2e9e50-1971-400d-9dce-1a5334503888';
   
   // Dynamic form state
   const [formData, setFormData] = useState({
@@ -118,6 +123,20 @@ export const QuoteView: React.FC<QuoteViewProps> = ({ onBack }) => {
         </svg>
       </div>
 
+      {success ? (
+        <div className="flex-1 flex flex-col items-center justify-center py-24 px-6 text-center gap-6">
+          <span className="material-symbols-outlined text-7xl text-green-500">check_circle</span>
+          <h2 className="text-3xl font-black text-[#181611] dark:text-white">Demande envoyée avec succès !</h2>
+          <p className="text-lg text-[#616f89] max-w-md">Merci, {formData.name}. Nos experts ont bien reçu votre demande et vous contacteront sous 24h.</p>
+          <button
+            onClick={onBack}
+            className="mt-4 flex items-center gap-2 px-8 h-12 rounded-lg font-bold text-white bg-primary hover:bg-primary/90 transition-all shadow-lg shadow-primary/20"
+          >
+            <span className="material-symbols-outlined">home</span>
+            Retour à l'accueil
+          </button>
+        </div>
+      ) : (<>
       <main className="flex-1 flex flex-col items-center py-12 px-4 md:px-10 lg:px-40">
         <div className="max-w-[1000px] w-full flex flex-col gap-8">
           <div className="flex flex-col gap-4">
@@ -224,11 +243,32 @@ export const QuoteView: React.FC<QuoteViewProps> = ({ onBack }) => {
               )}
 
               {step === 3 && (
-                <form className="flex flex-col gap-8 animate-in fade-in slide-in-from-right-4 duration-500" onSubmit={(e) => {
+                <form className="flex flex-col gap-8 animate-in fade-in slide-in-from-right-4 duration-500" onSubmit={async (e) => {
                   e.preventDefault();
-                  if (validateStep(3)) {
-                    alert("Merci ! Votre demande a été transmise à nos experts. Vous recevrez une réponse sous 24h.");
-                    if (onBack) onBack();
+                  if (!validateStep(3)) return;
+                  setSubmitting(true);
+                  setSubmitError('');
+                  try {
+                    await fetch(WEBHOOK_URL, {
+                      method: 'POST',
+                      mode: 'no-cors',
+                      headers: { 'Content-Type': 'text/plain' },
+                      body: JSON.stringify({
+                        nom: formData.name,
+                        societe: formData.company,
+                        email: formData.email,
+                        telephone: formData.phone,
+                        service: formData.serviceType,
+                        localisation: formData.location,
+                        duree: formData.duration,
+                        details: formData.details,
+                      }),
+                    });
+                    setSuccess(true);
+                  } catch {
+                    setSubmitError("Une erreur s'est produite. Veuillez réessayer.");
+                  } finally {
+                    setSubmitting(false);
                   }
                 }}>
                   <div className="flex flex-col gap-6">
@@ -250,14 +290,17 @@ export const QuoteView: React.FC<QuoteViewProps> = ({ onBack }) => {
                     </div>
                   </div>
                   
+                  {submitError && (
+                    <p className="text-xs font-medium text-guinea-red text-center">{submitError}</p>
+                  )}
                   <div className="flex items-center justify-between pt-4 border-t border-[#f5f3f0] dark:border-[#2a3447]">
-                    <button className="flex items-center gap-2 px-6 h-14 rounded-lg font-bold text-[#111318] dark:text-white bg-[#f5f3f0] dark:bg-[#2a3447] hover:bg-gray-200 dark:hover:bg-gray-700 transition-all" type="button" onClick={handleBack}>
+                    <button className="flex items-center gap-2 px-6 h-14 rounded-lg font-bold text-[#111318] dark:text-white bg-[#f5f3f0] dark:bg-[#2a3447] hover:bg-gray-200 dark:hover:bg-gray-700 transition-all" type="button" onClick={handleBack} disabled={submitting}>
                       <span className="material-symbols-outlined">arrow_back</span>
                       Retour
                     </button>
-                    <button className="flex items-center gap-2 px-10 h-14 rounded-lg font-black text-white bg-primary hover:bg-primary/90 shadow-lg shadow-primary/20 transition-all transform active:scale-95" type="submit">
-                      Finaliser la demande
-                      <span className="material-symbols-outlined">verified</span>
+                    <button className="flex items-center gap-2 px-10 h-14 rounded-lg font-black text-white bg-primary hover:bg-primary/90 shadow-lg shadow-primary/20 transition-all transform active:scale-95 disabled:opacity-60 disabled:cursor-not-allowed" type="submit" disabled={submitting}>
+                      {submitting ? 'Envoi en cours...' : 'Finaliser la demande'}
+                      <span className="material-symbols-outlined">{submitting ? 'hourglass_empty' : 'verified'}</span>
                     </button>
                   </div>
                 </form>
@@ -313,7 +356,7 @@ export const QuoteView: React.FC<QuoteViewProps> = ({ onBack }) => {
                 <path clipRule="evenodd" d="M47.2426 24L24 47.2426L0.757355 24L24 0.757355L47.2426 24ZM12.2426 21H35.7574L24 9.24264L12.2426 21Z" fillRule="evenodd"></path>
               </svg>
             </div>
-            <span className="text-sm font-bold dark:text-white">© 2024 GIPS Guinea.</span>
+            <span className="text-sm font-bold dark:text-white">© 2026 GIPS Guinea.</span>
           </div>
           <div className="flex gap-8 text-xs font-bold uppercase tracking-widest text-[#616f89] dark:text-gray-400">
             <a className="hover:text-primary transition-colors" href="#">Confidentialité</a>
@@ -322,6 +365,7 @@ export const QuoteView: React.FC<QuoteViewProps> = ({ onBack }) => {
           </div>
         </div>
       </footer>
+      </>)}
     </div>
   );
 };

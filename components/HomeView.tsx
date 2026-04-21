@@ -5,11 +5,16 @@ import { CEOSection } from './CEOSection';
 import { AboutSection } from './AboutSection';
 import { LocationSection } from './LocationSection';
 import { PartnersSection } from './PartnersSection';
+import { View } from '../App';
 
-export const HomeView: React.FC = () => {
+interface HomeViewProps {
+  setView: (view: View) => void;
+}
+
+export const HomeView: React.FC<HomeViewProps> = ({ setView }) => {
   return (
     <>
-      <Hero />
+      <Hero setView={setView} />
       <CEOSection />
       <AboutSection />
       <LocationSection />

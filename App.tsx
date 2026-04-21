@@ -17,7 +17,7 @@ export default function App() {
     <div className="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">
       <Header currentView={view} setView={setView} />
       <main className="flex-grow">
-        {view === 'home' && <HomeView />}
+        {view === 'home' && <HomeView setView={setView} />}
         {view === 'services' && <ServicesView />}
         {view === 'about' && <AboutView />}
         {view === 'contact' && <ContactView />}

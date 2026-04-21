@@ -1,11 +1,40 @@
 
-import React from 'react';
-import { IMAGES } from '../constants';
+import React, { useState } from 'react';
 
 export const ContactView: React.FC = () => {
+  const [form, setForm] = useState({ name: '', phone: '', email: '', message: '' });
+  const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState('');
+
+  const WEBHOOK_URL = 'https://n8n.kedi-tech.com/webhook/9731aef9-1d3d-4945-9118-74f219f423ef';
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setSubmitting(true);
+    setSubmitError('');
+    try {
+      await fetch(WEBHOOK_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'text/plain' },
+        body: JSON.stringify({
+          nom: form.name,
+          telephone: form.phone,
+          email: form.email,
+          message: form.message,
+        }),
+      });
+      setSubmitted(true);
+    } catch {
+      setSubmitError("Une erreur s'est produite. Veuillez réessayer.");
+    } finally {
+      setSubmitting(false);
+    }
+  };
+
   return (
     <div className="flex-grow">
-      {/* Hero Section & Form */}
       <section className="mx-auto max-w-[1200px] px-6 py-12 lg:py-20">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-start">
           {/* Left Column: Contact Form */}
@@ -20,34 +49,79 @@ export const ContactView: React.FC = () => {
               </p>
             </div>
             <div className="rounded-2xl border border-[#dbdfe6] bg-white p-8 shadow-sm">
-              <form action="#" className="flex flex-col gap-6" onSubmit={(e) => e.preventDefault()}>
-                <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-                  <label className="flex flex-col gap-2">
-                    <span className="text-sm font-bold text-[#111318]">Nom Complet</span>
-                    <input className="h-12 w-full rounded-lg border border-[#dbdfe6] bg-white px-4 text-base transition-all focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none" placeholder="Ex: Mamadou Diallo" type="text" />
-                  </label>
-                  <label className="flex flex-col gap-2">
-                    <span className="text-sm font-bold text-[#111318]">Téléphone</span>
-                    <input className="h-12 w-full rounded-lg border border-[#dbdfe6] bg-white px-4 text-base transition-all focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none" placeholder="+224 620 00 00 00" type="tel" />
-                  </label>
+              {submitted ? (
+                <div className="flex flex-col items-center gap-4 py-8 text-center">
+                  <span className="material-symbols-outlined text-5xl text-green-500">check_circle</span>
+                  <p className="text-lg font-bold text-[#111318]">Message envoyé !</p>
+                  <p className="text-sm text-[#616f89]">Votre client de messagerie s'est ouvert. Nous vous répondrons dans les plus brefs délais.</p>
+                  <button
+                    onClick={() => setSubmitted(false)}
+                    className="mt-2 rounded-lg border border-[#dbdfe6] px-6 py-2 text-sm font-bold text-[#111318] hover:bg-[#f0f2f4] transition-all"
+                  >
+                    Envoyer un autre message
+                  </button>
                 </div>
-                <label className="flex flex-col gap-2">
-                  <span className="text-sm font-bold text-[#111318]">Email</span>
-                  <input className="h-12 w-full rounded-lg border border-[#dbdfe6] bg-white px-4 text-base transition-all focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none" placeholder="votre@email.com" type="email" />
-                </label>
-                <label className="flex flex-col gap-2">
-                  <span className="text-sm font-bold text-[#111318]">Votre Message</span>
-                  <textarea className="w-full resize-none rounded-lg border border-[#dbdfe6] bg-white p-4 text-base transition-all focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none" placeholder="Comment pouvons-nous vous aider ?" rows={4}></textarea>
-                </label>
-                <button className="flex w-full items-center justify-center gap-2 rounded-lg bg-primary py-4 text-base font-bold text-white transition-all hover:bg-blue-700 shadow-lg shadow-primary/25 active:scale-[0.98]" type="submit">
-                  Envoyer le Message
-                  <span className="material-symbols-outlined">send</span>
-                </button>
-                <p className="text-center text-xs text-[#616f89]">
-                  <span className="material-symbols-outlined text-[14px] align-middle mr-1">lock</span>
-                  Vos données sont sécurisées et traitées en toute confidentialité par GIPS.
-                </p>
-              </form>
+              ) : (
+                <form className="flex flex-col gap-6" onSubmit={handleSubmit}>
+                  <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+                    <label className="flex flex-col gap-2">
+                      <span className="text-sm font-bold text-[#111318]">Nom Complet</span>
+                      <input
+                        className="h-12 w-full rounded-lg border border-[#dbdfe6] bg-white px-4 text-base transition-all focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none"
+                        placeholder="Ex: Mamadou Diallo"
+                        type="text"
+                        value={form.name}
+                        onChange={(e) => setForm({ ...form, name: e.target.value })}
+                      />
+                    </label>
+                    <label className="flex flex-col gap-2">
+                      <span className="text-sm font-bold text-[#111318]">Téléphone</span>
+                      <input
+                        className="h-12 w-full rounded-lg border border-[#dbdfe6] bg-white px-4 text-base transition-all focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none"
+                        placeholder="+224 620 00 00 00"
+                        type="tel"
+                        value={form.phone}
+                        onChange={(e) => setForm({ ...form, phone: e.target.value })}
+                      />
+                    </label>
+                  </div>
+                  <label className="flex flex-col gap-2">
+                    <span className="text-sm font-bold text-[#111318]">Email</span>
+                    <input
+                      className="h-12 w-full rounded-lg border border-[#dbdfe6] bg-white px-4 text-base transition-all focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none"
+                      placeholder="votre@email.com"
+                      type="email"
+                      value={form.email}
+                      onChange={(e) => setForm({ ...form, email: e.target.value })}
+                    />
+                  </label>
+                  <label className="flex flex-col gap-2">
+                    <span className="text-sm font-bold text-[#111318]">Votre Message</span>
+                    <textarea
+                      className="w-full resize-none rounded-lg border border-[#dbdfe6] bg-white p-4 text-base transition-all focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none"
+                      placeholder="Comment pouvons-nous vous aider ?"
+                      rows={4}
+                      value={form.message}
+                      onChange={(e) => setForm({ ...form, message: e.target.value })}
+                    />
+                  </label>
+                  <button
+                    className="flex w-full items-center justify-center gap-2 rounded-lg bg-primary py-4 text-base font-bold text-white transition-all hover:bg-blue-700 shadow-lg shadow-primary/25 active:scale-[0.98] disabled:opacity-60 disabled:cursor-not-allowed"
+                    type="submit"
+                    disabled={submitting}
+                  >
+                    {submitting ? 'Envoi en cours...' : 'Envoyer le Message'}
+                    <span className="material-symbols-outlined">{submitting ? 'hourglass_empty' : 'send'}</span>
+                  </button>
+                  {submitError && (
+                    <p className="text-center text-xs font-medium text-red-500">{submitError}</p>
+                  )}
+                  <p className="text-center text-xs text-[#616f89]">
+                    <span className="material-symbols-outlined text-[14px] align-middle mr-1">lock</span>
+                    Vos données sont sécurisées et traitées en toute confidentialité par GIPS.
+                  </p>
+                </form>
+              )}
             </div>
           </div>
 
@@ -70,16 +144,21 @@ export const ContactView: React.FC = () => {
                   <span className="material-symbols-outlined">call</span>
                 </div>
                 <h3 className="text-sm font-bold text-[#111318]">Téléphone</h3>
-                <p className="mt-2 text-sm leading-relaxed text-[#616f89]">
-                  +224 628 75 18 75<br />
-                  +224 621 93 99 06<br />
-                  +224 620 41 42 26
-                </p>
+                <div className="mt-2 flex flex-col gap-1 text-sm text-[#616f89]">
+                  <a href="tel:+22462875187" className="hover:text-primary transition-colors">+224 628 75 18 75</a>
+                  <a href="tel:+22462193990" className="hover:text-primary transition-colors">+224 621 93 99 06</a>
+                  <a href="tel:+22462041422" className="hover:text-primary transition-colors">+224 620 41 42 26</a>
+                </div>
               </div>
             </div>
 
             {/* WhatsApp Action */}
-            <a className="group flex items-center justify-between rounded-xl bg-[#25D366] p-5 text-white shadow-lg transition-all hover:bg-[#128C7E]" href="#">
+            <a
+              className="group flex items-center justify-between rounded-xl bg-[#25D366] p-5 text-white shadow-lg transition-all hover:bg-[#128C7E]"
+              href="https://wa.me/224628751875"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <div className="flex items-center gap-4">
                 <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white/20">
                   <svg className="h-6 w-6 fill-current" viewBox="0 0 24 24">
@@ -101,21 +180,23 @@ export const ContactView: React.FC = () => {
                   <span className="material-symbols-outlined text-primary">explore</span>
                   <span className="text-sm font-bold text-[#111318]">Notre siège : Sonfonia, Conakry</span>
                 </div>
-                <span className="text-xs font-medium text-[#616f89]">Conakry, Guinée</span>
+                <a
+                  href="https://maps.google.com/?q=Sonfonia,Conakry,Guinea"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs font-medium text-primary hover:underline"
+                >
+                  Ouvrir dans Maps
+                </a>
               </div>
-              <div className="relative h-[300px] w-full bg-[#f0f2f4]">
-                <div 
-                  className="absolute inset-0 bg-cover bg-center opacity-80" 
-                  // Corrected: using MAP_CONTACT as CONTACT_MAP was missing
-                  style={{ backgroundImage: `url('${IMAGES.MAP_CONTACT}')` }}
-                ></div>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="relative">
-                    <span className="material-symbols-outlined text-5xl text-primary animate-bounce">location_on</span>
-                    <div className="absolute -bottom-1 left-1/2 h-2 w-2 -translate-x-1/2 rounded-full bg-primary/20 blur-sm"></div>
-                  </div>
-                </div>
-              </div>
+              <iframe
+                title="Siège GIPS - Sonfonia, Conakry"
+                src="https://maps.google.com/maps?q=Sonfonia,Conakry,Guinea&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                className="w-full h-[300px] border-0"
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
             </div>
           </div>
         </div>
