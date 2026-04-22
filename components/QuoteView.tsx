@@ -130,7 +130,7 @@ export const QuoteView: React.FC<QuoteViewProps> = ({ onBack }) => {
           <main className="flex-1 flex flex-col items-center py-12 px-4 md:px-10 lg:px-40">
             <div className="max-w-[1000px] w-full flex flex-col gap-8">
               <div className="flex flex-col gap-4">
-                <div className="flex flex-col gap-2 text-center md:text-left">
+                <div className="flex flex-col gap-2 text-center md:text-start">
                   <h1 className="text-[#181611] dark:text-white text-4xl md:text-5xl font-black leading-tight tracking-tight">{t('quote.title')}</h1>
                   <p className="text-[#616f89] dark:text-gray-400 text-lg max-w-2xl">{t('quote.desc')}</p>
                 </div>
@@ -144,7 +144,7 @@ export const QuoteView: React.FC<QuoteViewProps> = ({ onBack }) => {
                   </div>
 
                   {step === 1 && (
-                    <form className="flex flex-col gap-8 animate-in fade-in slide-in-from-right-4 duration-500" onSubmit={handleNext}>
+                    <form className="flex flex-col gap-8 animate-in fade-in slide-in-from-end-4 duration-500" onSubmit={handleNext}>
                       <div className="flex flex-col gap-6">
                         <div className="flex items-center gap-3 border-b border-[#f5f3f0] dark:border-[#2a3447] pb-4">
                           <span className="material-symbols-outlined text-primary bg-primary/10 p-2 rounded-lg">person</span>
@@ -175,14 +175,14 @@ export const QuoteView: React.FC<QuoteViewProps> = ({ onBack }) => {
                       <div className="flex items-center justify-end pt-4 border-t border-[#f5f3f0] dark:border-[#2a3447]">
                         <button className="flex items-center gap-2 px-10 h-14 rounded-lg font-black text-white bg-primary hover:bg-primary/90 shadow-lg shadow-primary/20 transition-all transform active:scale-95" type="submit">
                           {t('quote.nextBtn')}
-                          <span className="material-symbols-outlined">arrow_forward</span>
+                          <span className="material-symbols-outlined rtl:-rotate-180 transition-transform">arrow_forward</span>
                         </button>
                       </div>
                     </form>
                   )}
 
                   {step === 2 && (
-                    <form className="flex flex-col gap-8 animate-in fade-in slide-in-from-right-4 duration-500" onSubmit={handleNext}>
+                    <form className="flex flex-col gap-8 animate-in fade-in slide-in-from-end-4 duration-500" onSubmit={handleNext}>
                       <div className="flex flex-col gap-6">
                         <div className="flex items-center gap-3 border-b border-[#f5f3f0] dark:border-[#2a3447] pb-4">
                           <span className="material-symbols-outlined text-primary bg-primary/10 p-2 rounded-lg">shield</span>
@@ -213,27 +213,27 @@ export const QuoteView: React.FC<QuoteViewProps> = ({ onBack }) => {
                         <div className="flex flex-col gap-2">
                           <label className="text-sm font-bold text-[#181611] dark:text-gray-200">{t('quote.durationLabel')}</label>
                           <div className="relative">
-                            <span className="absolute left-4 top-1/2 -translate-y-1/2 material-symbols-outlined text-gray-400">schedule</span>
-                            <input name="duration" value={formData.duration} onChange={handleInputChange} className={`${inputClasses('duration')} pl-12`} placeholder={t('quote.durationPlaceholder')} type="text" />
+                            <span className="absolute start-4 top-1/2 -translate-y-1/2 material-symbols-outlined text-gray-400">schedule</span>
+                            <input name="duration" value={formData.duration} onChange={handleInputChange} className={`${inputClasses('duration')} ps-12`} placeholder={t('quote.durationPlaceholder')} type="text" />
                           </div>
                           {errors.duration && <span className="text-xs font-medium text-guinea-red">{errors.duration}</span>}
                         </div>
                       </div>
                       <div className="flex items-center justify-between pt-4 border-t border-[#f5f3f0] dark:border-[#2a3447]">
                         <button className="flex items-center gap-2 px-6 h-14 rounded-lg font-bold text-[#111318] dark:text-white bg-[#f5f3f0] dark:bg-[#2a3447] hover:bg-gray-200 dark:hover:bg-gray-700 transition-all" type="button" onClick={handleBack}>
-                          <span className="material-symbols-outlined">arrow_back</span>
+                          <span className="material-symbols-outlined rtl:rotate-180 transition-transform">arrow_back</span>
                           {t('quote.backBtn')}
                         </button>
                         <button className="flex items-center gap-2 px-10 h-14 rounded-lg font-black text-white bg-primary hover:bg-primary/90 shadow-lg shadow-primary/20 transition-all transform active:scale-95" type="submit">
                           {t('quote.nextBtn')}
-                          <span className="material-symbols-outlined">arrow_forward</span>
+                          <span className="material-symbols-outlined rtl:-rotate-180 transition-transform">arrow_forward</span>
                         </button>
                       </div>
                     </form>
                   )}
 
                   {step === 3 && (
-                    <form className="flex flex-col gap-8 animate-in fade-in slide-in-from-right-4 duration-500" onSubmit={async (e) => {
+                    <form className="flex flex-col gap-8 animate-in fade-in slide-in-from-end-4 duration-500" onSubmit={async (e) => {
                       e.preventDefault();
                       if (!validateStep(3)) return;
                       setSubmitting(true);
@@ -275,7 +275,7 @@ export const QuoteView: React.FC<QuoteViewProps> = ({ onBack }) => {
                       {submitError && <p className="text-xs font-medium text-guinea-red text-center">{submitError}</p>}
                       <div className="flex items-center justify-between pt-4 border-t border-[#f5f3f0] dark:border-[#2a3447]">
                         <button className="flex items-center gap-2 px-6 h-14 rounded-lg font-bold text-[#111318] dark:text-white bg-[#f5f3f0] dark:bg-[#2a3447] hover:bg-gray-200 dark:hover:bg-gray-700 transition-all" type="button" onClick={handleBack} disabled={submitting}>
-                          <span className="material-symbols-outlined">arrow_back</span>
+                          <span className="material-symbols-outlined rtl:rotate-180 transition-transform">arrow_back</span>
                           {t('quote.backBtn')}
                         </button>
                         <button className="flex items-center gap-2 px-10 h-14 rounded-lg font-black text-white bg-primary hover:bg-primary/90 shadow-lg shadow-primary/20 transition-all transform active:scale-95 disabled:opacity-60 disabled:cursor-not-allowed" type="submit" disabled={submitting}>
@@ -317,7 +317,7 @@ export const QuoteView: React.FC<QuoteViewProps> = ({ onBack }) => {
           </main>
 
           <footer className="bg-white/50 dark:bg-[#101622]/50 border-t border-[#e6e3db] dark:border-[#2a3447] py-10 px-6 md:px-20 mt-12 backdrop-blur-sm">
-            <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8 text-center md:text-start">
               <div className="flex items-center gap-3 opacity-60">
                 <div className="size-8 text-primary">
                   <svg fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">

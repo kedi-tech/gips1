@@ -48,14 +48,14 @@ export const AboutSection: React.FC = () => {
             </div>
           </div>
           <div className="relative">
-            <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-guinea-red/10 rounded-lg -z-10"></div>
+            <div className="absolute -bottom-6 -end-6 w-24 h-24 bg-guinea-red/10 rounded-lg -z-10"></div>
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <img
                 alt="Équipe GIPS devant des camions"
                 className="w-full aspect-[4/3] object-cover"
                 src={IMAGES.ABOUT_TEAM_HOME}
               />
-              <div className="absolute bottom-6 left-6 right-6 p-6 bg-white/95 backdrop-blur rounded-xl shadow-lg border-l-4 border-guinea-yellow">
+              <div className="absolute bottom-6 start-6 end-6 p-6 bg-white/95 backdrop-blur rounded-xl shadow-lg border-s-4 border-guinea-yellow">
                 <div className="flex justify-between items-center">
                   <div>
                     <p className="text-primary font-black text-3xl leading-none">2017</p>

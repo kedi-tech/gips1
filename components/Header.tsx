@@ -23,6 +23,7 @@ export const Header: React.FC<HeaderProps> = ({ currentView, setView }) => {
     { code: 'en', name: 'English', flag: '🇬🇧' },
     { code: 'es', name: 'Español', flag: '🇪🇸' },
     { code: 'zh', name: '中文', flag: '🇨🇳' },
+    { code: 'ar', name: 'العربية', flag: '🇸🇦' },
   ];
 
   const currentLang = languages.find(l => l.code === lang) || languages[0];
@@ -76,6 +77,12 @@ export const Header: React.FC<HeaderProps> = ({ currentView, setView }) => {
             {t('nav.formation')}
           </button>
           <button
+            onClick={() => setView('team')}
+            className={`text-sm font-bold transition-all hover:scale-105 ${currentView === 'team' ? activeLinkColor : 'text-slate-600 hover:text-primary'}`}
+          >
+            {t('nav.team')}
+          </button>
+          <button
             onClick={() => setView('about')}
             className={`text-sm font-bold transition-all hover:scale-105 ${currentView === 'about' ? activeLinkColor : 'text-slate-600 hover:text-primary'}`}
           >
@@ -102,7 +109,7 @@ export const Header: React.FC<HeaderProps> = ({ currentView, setView }) => {
             </button>
 
             {isLangOpen && (
-              <div className="absolute right-0 mt-3 w-48 bg-white rounded-2xl shadow-2xl border border-slate-100 overflow-hidden z-[100]">
+              <div className="absolute end-0 mt-3 w-48 bg-white rounded-2xl shadow-2xl border border-slate-100 overflow-hidden z-[100]">
                 <div className="p-2 flex flex-col gap-1">
                   {languages.map((l) => (
                     <button

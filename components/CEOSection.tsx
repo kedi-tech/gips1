@@ -11,7 +11,7 @@ export const CEOSection: React.FC = () => {
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="relative order-2 lg:order-1">
-            <div className="absolute -top-10 -left-10 w-40 h-40 bg-guinea-yellow/10 rounded-full -z-10"></div>
+            <div className="absolute -top-10 -start-10 w-40 h-40 bg-guinea-yellow/10 rounded-full -z-10"></div>
             <div className="relative rounded-2xl overflow-hidden shadow-2xl border-b-8 border-primary">
               <img
                 alt="PDG M. Condé Souleymane"

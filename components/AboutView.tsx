@@ -12,7 +12,7 @@ export const AboutView: React.FC = () => {
       <section className="relative h-[500px] w-full overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `linear-gradient(to right, rgba(16, 22, 34, 0.8), rgba(16, 22, 34, 0.2)), url('${IMAGES.ABOUT_HERO}')` }}
+          style={{ backgroundImage: `linear-gradient(to inline-end, rgba(16, 22, 34, 0.8), rgba(16, 22, 34, 0.2)), url('${IMAGES.ABOUT_HERO}')` }}
         ></div>
         <div className="relative mx-auto flex h-full max-w-[1280px] flex-col justify-center px-6 lg:px-10">
           <div className="max-w-2xl space-y-6 text-white">
@@ -54,7 +54,7 @@ export const AboutView: React.FC = () => {
                 className="aspect-[4/5] overflow-hidden rounded-2xl bg-gray-200 shadow-2xl"
                 style={{ backgroundImage: `url('${IMAGES.CEO_ABOUT}')`, backgroundSize: 'cover', backgroundPosition: 'center' }}
               ></div>
-              <div className="absolute -bottom-6 -right-6 hidden size-32 items-center justify-center rounded-2xl bg-primary p-4 text-white lg:flex">
+              <div className="absolute -bottom-6 -end-6 hidden size-32 items-center justify-center rounded-2xl bg-primary p-4 text-white lg:flex">
                 <div className="text-center">
                   <span className="block text-2xl font-bold">TOP</span>
                   <span className="text-xs uppercase opacity-80">{t('av.ceo.topLabel')}</span>
@@ -67,7 +67,7 @@ export const AboutView: React.FC = () => {
                 <h3 className="mt-2 text-4xl font-black text-[#111318]">{t('av.ceo.name')}</h3>
                 <p className="text-xl font-medium text-gray-500">{t('av.ceo.jobTitle')}</p>
               </div>
-              <blockquote className="relative border-l-4 border-primary pl-6 text-2xl font-medium italic text-[#111318]">
+              <blockquote className="relative border-s-4 border-primary ps-6 text-2xl font-medium italic text-[#111318]">
                 {t('av.ceo.quote')}
               </blockquote>
               <div className="space-y-4 text-lg leading-relaxed text-gray-600">
@@ -108,15 +108,15 @@ export const AboutView: React.FC = () => {
                   className="absolute inset-0 bg-cover bg-center grayscale group-hover:grayscale-0 transition-all duration-700"
                   style={{ backgroundImage: `url('${IMAGES.MAP_ABOUT}')` }}
                 ></div>
-                <div className="absolute top-1/2 left-1/4 animate-bounce">
+                <div className="absolute top-1/2 start-1/4 animate-bounce">
                   <span className="material-symbols-outlined text-primary text-4xl drop-shadow-lg">location_on</span>
                   <div className="bg-white p-2 rounded-lg shadow-xl text-xs font-bold mt-1">Boké (Mines)</div>
                 </div>
-                <div className="absolute top-2/3 left-1/2 animate-pulse">
+                <div className="absolute top-2/3 start-1/2 animate-pulse">
                   <span className="material-symbols-outlined text-primary text-4xl drop-shadow-lg">location_on</span>
                   <div className="bg-white p-2 rounded-lg shadow-xl text-xs font-bold mt-1">Conakry (HQ)</div>
                 </div>
-                <div className="absolute top-1/3 left-2/3">
+                <div className="absolute top-1/3 start-2/3">
                   <span className="material-symbols-outlined text-primary text-4xl drop-shadow-lg">location_on</span>
                   <div className="bg-white p-2 rounded-lg shadow-xl text-xs font-bold mt-1">Kankan</div>
                 </div>
@@ -244,7 +244,7 @@ export const AboutView: React.FC = () => {
             <h3 className="mt-2 text-4xl font-black text-[#111318]">{t('av.timeline.title')}</h3>
           </div>
           <div className="relative grid gap-8 md:grid-cols-4">
-            <div className="absolute top-8 left-0 hidden h-0.5 w-full bg-primary/20 md:block"></div>
+            <div className="absolute top-8 start-0 hidden h-0.5 w-full bg-primary/20 md:block"></div>
             <div className="relative space-y-4">
               <div className="size-6 rounded-full bg-primary ring-8 ring-primary/10"></div>
               <div className="pt-2">

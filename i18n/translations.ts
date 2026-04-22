@@ -1,4 +1,4 @@
-export type Lang = 'fr' | 'en' | 'es' | 'zh';
+export type Lang = 'fr' | 'en' | 'es' | 'zh' | 'ar';
 
 type Flat = Record<string, string>;
 
@@ -8,6 +8,7 @@ export const fr: Flat = {
   'nav.services': 'Services',
   'nav.formation': 'Formation',
   'nav.about': 'À Propos',
+  'nav.team': "L'Équipe",
   'nav.contact': 'Contact',
   'nav.quoteBtn': 'Demander un Devis',
   'nav.quoteInProgress': 'Devis en cours',
@@ -347,6 +348,18 @@ export const fr: Flat = {
   'tv.cta.title': 'Prêt à commencer votre formation ?',
   'tv.cta.desc': 'Rejoignez l\'élite de la sécurité en Guinée. Contactez notre centre de formation dès aujourd\'hui.',
   'tv.cta.btn': 'S\'inscrire maintenant',
+  'tv.phil.quote': "\"Nous ne formons pas seulement des agents de sécurité ; nous forgeons des défenseurs professionnels de la vie et des biens.\"",
+  'tv.phil.desc': "À l'Académie GIPS, notre philosophie est enracinée dans la discipline, la précision tactique et un engagement éthique profond. Chaque diplômé porte la marque d'excellence qui définit notre institution.",
+  
+  // TEAM VIEW
+  'tm.hero.badge': 'Nos Experts',
+  'tm.hero.title': 'L\'Élite de la Sécurité en Guinée',
+  'tm.hero.desc': 'Rencontrez les hommes et les femmes dévoués qui assurent votre protection au quotidien avec rigueur et professionnalisme.',
+  'tm.leadership.title': 'Direction Générale',
+  'tm.specialized.title': 'Unités Spécialisées',
+  'tm.recruitment.title': 'Rejoignez l\'Élite',
+  'tm.recruitment.desc': 'Vous avez le sens du devoir et de la discipline ? GIPS recrute les meilleurs talents pour renforcer ses équipes.',
+  'tm.recruitment.btn': 'Postuler Maintenant',
 };
 
 export const en: Flat = {
@@ -355,6 +368,7 @@ export const en: Flat = {
   'nav.services': 'Services',
   'nav.formation': 'Training',
   'nav.about': 'About',
+  'nav.team': 'Team',
   'nav.contact': 'Contact',
   'nav.quoteBtn': 'Request a Quote',
   'nav.quoteInProgress': 'Quote in progress',
@@ -694,6 +708,18 @@ export const en: Flat = {
   'tv.cta.title': 'Ready to start your training?',
   'tv.cta.desc': 'Join the elite of security in Guinea. Contact our training center today.',
   'tv.cta.btn': 'Enroll now',
+  'tv.phil.quote': "\"We don't just train security guards; we forge professional defenders of life and property.\"",
+  'tv.phil.desc': "At GIPS Academy, our philosophy is rooted in discipline, tactical precision, and deep ethical commitment. Every graduate carries the mark of excellence that defines our institution.",
+
+  // TEAM VIEW
+  'tm.hero.badge': 'Our Experts',
+  'tm.hero.title': 'The Security Elite in Guinea',
+  'tm.hero.desc': 'Meet the dedicated men and women who ensure your protection daily with rigor and professionalism.',
+  'tm.leadership.title': 'General Management',
+  'tm.specialized.title': 'Specialized Units',
+  'tm.recruitment.title': 'Join the Elite',
+  'tm.recruitment.desc': 'Do you have a sense of duty and discipline? GIPS recruits the best talent to strengthen its teams.',
+  'tm.recruitment.btn': 'Apply Now',
 };
 
 export const es: Flat = {
@@ -702,6 +728,7 @@ export const es: Flat = {
   'nav.services': 'Servicios',
   'nav.formation': 'Formación',
   'nav.about': 'Nosotros',
+  'nav.team': 'Equipo',
   'nav.contact': 'Contacto',
   'nav.quoteBtn': 'Solicitar Presupuesto',
   'nav.quoteInProgress': 'Presupuesto en curso',
@@ -1041,6 +1068,18 @@ export const es: Flat = {
   'tv.cta.title': '¿Listo para comenzar su capacitación?',
   'tv.cta.desc': 'Únase a la élite de la seguridad en Guinea. Contacte con nuestro centro de capacitación hoy mismo.',
   'tv.cta.btn': 'Inscríbase ahora',
+  'tv.phil.quote': "\"No solo capacitamos guardias de seguridad; forjamos defensoores profesionales de la vida y la propiedad.\"",
+  'tv.phil.desc': "En la Academia GIPS, nuestra filosofía está arraigada en la disciplina, la precisión táctica y un profundo compromiso ético. Cada graduado lleva la marca de excelencia que define a nuestra institución.",
+
+  // TEAM VIEW
+  'tm.hero.badge': 'Nuestros Expertos',
+  'tm.hero.title': 'La Élite de la Seguridad en Guinea',
+  'tm.hero.desc': 'Conozca a los hombres y mujeres dedicados que garantizan su protección diaria con rigor y profesionalismo.',
+  'tm.leadership.title': 'Dirección General',
+  'tm.specialized.title': 'Unidades Especializadas',
+  'tm.recruitment.title': 'Únete a la Élite',
+  'tm.recruitment.desc': '¿Tienes sentido del deber y disciplina? GIPS recluta a los mejores talentos para fortalecer sus equipos.',
+  'tm.recruitment.btn': 'Postular Ahora',
 };
 
 export const zh: Flat = {
@@ -1049,6 +1088,7 @@ export const zh: Flat = {
   'nav.services': '服务',
   'nav.formation': '培训',
   'nav.about': '关于我们',
+  'nav.team': '团队',
   'nav.contact': '联系我们',
   'nav.quoteBtn': '请求报价',
   'nav.quoteInProgress': '报价处理中',
@@ -1388,6 +1428,378 @@ export const zh: Flat = {
   'tv.cta.title': '准备好开始您的培训了吗？',
   'tv.cta.desc': '加入几内亚的安保精英。立即联系我们的培训中心。',
   'tv.cta.btn': '立即报名',
+  'tv.phil.quote': "“我们不仅培训保安；我们还铸就生命和财产的专业捍卫者。”",
+  'tv.phil.desc': "在 GIPS 学院，我们的理念植根于纪律、战术精准和深厚的道德承诺。每一位毕业生都带有定义我们机构的卓越印记。",
+
+  // TEAM VIEW
+  'tm.hero.badge': '我们的专家',
+  'tm.hero.title': '几内亚安保精英',
+  'tm.hero.desc': '认识这些致力于通过严谨和专业精神每天保障您安全的男女人员。',
+  'tm.leadership.title': '总经理',
+  'tm.specialized.title': '专业单位',
+  'tm.recruitment.title': '加入精英行列',
+  'tm.recruitment.desc': '您有责任感和纪律性吗？GIPS 招募最优秀的人才来加强其团队。',
+  'tm.recruitment.btn': '立即申请',
 };
 
-export const translations = { fr, en, es, zh };
+export const ar: Flat = {
+  // NAV
+  'nav.home': 'الرئيسية',
+  'nav.services': 'خدماتنا',
+  'nav.formation': 'التدريب',
+  'nav.about': 'من نحن',
+  'nav.team': 'الفريق',
+  'nav.contact': 'اتصل بنا',
+  'nav.quoteBtn': 'طلب عرض سعر',
+  'nav.quoteInProgress': 'طلب سعر قيد التنفيذ',
+
+  // HERO
+  'hero.badge': 'خبرة غينية أصيلة',
+  'hero.title1': 'أمنكم،',
+  'hero.title2': 'أولويتنا المطلقة',
+  'hero.desc': 'الرائد في مجال الأمن الخاص في غينيا. نحن نحمي ممتلكاتكم وأحبائكم وبنيتكم التحتية بأصالة وصرامة لا تلين في جميع أنحاء الإقليم.',
+  'hero.callBtn': 'اتصل بنا الآن',
+  'hero.quoteBtn': 'طلب عرض سعر',
+  'hero.cert': 'معتمد',
+  'hero.certSub': 'معايير GIPS',
+  'hero.elite': 'نخبة',
+  'hero.eliteSub': 'موظفون مدربون',
+
+  // CEO SECTION (home)
+  'ceo.label': 'لقاء مع المدير التنفيذي',
+  'ceo.title': 'رؤية التميز لـ ',
+  'ceo.titleHighlight': 'الأمن في غينيا',
+  'ceo.quote': '\"في GIPS، التزامنا يتجاوز مجرد المراقبة. نحن نبني ثقة دائمة مع عملائنا من خلال وضع النزاهة والاحتراف في قلب كل تدخل.\"',
+  'ceo.desc': 'تحت قيادة السيد كوندي سليمان، فرضت GIPS نفسها كمرجع لا غنى عنه في القطاع، حيث تجمع بين المعرفة الميدانية العميقة والإدارة الحديثة والصارمة.',
+  'ceo.btn': 'كلمة المدير العام',
+
+  // ABOUT SECTION (home)
+  'aboutSection.label': 'من نحن',
+  'aboutSection.title': 'التميز والتفاني في خدمة الوطن',
+  'aboutSection.desc': 'تأسست في عام 2017، G.I.P.S (غينيا الدولية للأمن الخاص) هي نتيجة شراكة بين الشباب الغيني في غينيا والشتات الفرنسي، مكرسة لتوفير خدمات أمنية موثوقة واحترافية لحماية الممتلكات والأشخاص في جميع أنحاء غينيا.',
+  'aboutSection.feat1Title': 'مراقبة 24/7',
+  'aboutSection.feat1Desc': 'يقظة دائمة لحماية لا تشوبها شائبة.',
+  'aboutSection.feat2Title': 'موظفون معتمدون',
+  'aboutSection.feat2Desc': 'عملاء مدربون بصرامة ومعتمدون من GIPS.',
+  'aboutSection.learnMore': 'اكتشف المزيد عن خدماتنا',
+  'aboutSection.foundedLabel': 'تأسست في',
+  'aboutSection.agentsLabel': 'عملاء',
+  'aboutSection.clientsLabel': 'عملاء (شركات)',
+
+  // LOCATION SECTION
+  'location.title': 'المقر الرئيسي كوناكري',
+  'location.desc': 'تغطية استراتيجية في جميع أنحاء الأراضي الغينية.',
+
+  // PARTNERS SECTION (home)
+  'partners.label': 'يثقون بنا — شركاؤنا',
+
+  // FOOTER
+  'footer.desc': 'تلتزم غينيا الدولية للأمن الخاص (GIPS) بتقديم حلول أمنية مبتكرة وموثوقة لحماية مصالحكم الأكثر قيمة.',
+  'footer.companyTitle': 'الشركة',
+  'footer.home': 'الرئيسية',
+  'footer.about': 'من نحن',
+  'footer.careers': 'الوظائف',
+  'footer.servicesTitle': 'الخدمات',
+  'footer.allServices': 'جميع الخدمات',
+  'footer.guarding': 'الحراسة',
+  'footer.vipEscort': 'مرافقة VIP',
+  'footer.surveillance': 'المراقبة عن بعد',
+  'footer.contactTitle': 'اتصال',
+  'footer.contactUs': 'اتصل بنا',
+  'footer.copyright': '© 2017–2026 غينيا الدولية للأمن الخاص (GIPS) — سونفونيا، كوناكري. جميع الحقوق محفوظة.',
+
+  // SERVICES VIEW — hero
+  'sv.hero.badge': 'حلول أمنية للنخبة',
+  'sv.hero.title': 'حماية ممتازة لغينيا أكثر أمانًا',
+  'sv.hero.desc': 'تقدم غينيا الدولية للأمن الخاص (GIPS) حماية من النخبة، ومراقبة المواقع، وحلول أمنية احترافية مصممة للشركات والفعاليات والأفراد.',
+  'sv.hero.btn1': 'خدماتنا',
+  'sv.hero.btn2': 'اتصل بنا',
+  'sv.section.label': 'خدمات احترافية',
+  'sv.section.title': 'العمليات الميدانية لـ GIPS',
+
+  // SERVICES VIEW — cards
+  'sv.c1.title': 'حراسة المواقع',
+  'sv.c1.desc': 'مراقبة في الموقع على مدار 24 ساعة والتحكم في الوصول للمجمعات السكنية والتجارية.',
+  'sv.c1.li1': 'إدارة الاستقبال والسجلات',
+  'sv.c1.li2': 'دوريات راجلة منتظمة للمحيط',
+  'sv.c1.li3': 'مراقبة CCTV والتقارير',
+
+  'sv.c2.title': 'أمن الفعاليات',
+  'sv.c2.desc': 'إدارة الحشود وتقييم المخاطر للفعاليات العامة والخاصة الكبرى.',
+  'sv.c2.li1': 'التحقق من الدخول والتذاكر',
+  'sv.c2.li2': 'إلغاء تصعيد الصراعات',
+  'sv.c2.li3': 'تأمين مناطق VIP',
+
+  'sv.c3.title': 'المواقع الصناعية والتعدينية',
+  'sv.c3.desc': 'اللوجستيات المتخصصة والأمن المحيطي لعمليات التعدين والصناعة الحيوية في غينيا.',
+  'sv.c3.li1': 'حراسة الأصول والمعدات الثقيلة',
+  'sv.c3.li2': 'مرافقة سلسلة التوريد',
+  'sv.c3.li3': 'بروتوكول الوصول إلى مواقع التعدين',
+
+  'sv.c4.title': 'حماية مقربة',
+  'sv.c4.desc': 'حراس شخصيون من النخبة ونقل آمن للدبلوماسيين والمسؤولين التنفيذيين.',
+  'sv.c4.li1': 'حماية شخصية سرية',
+  'sv.c4.li2': 'تخطيط الطرق الآمنة',
+  'sv.c4.li3': 'أفراد أمن متعددو اللغات',
+
+  'sv.c5.title': 'دورية متنقلة',
+  'sv.c5.desc': 'مركبات تدخل سريع متتبعة بواسطة GPS ووحدات استجابة متنقلة للإنذار في المدن الكبرى.',
+  'sv.c5.li1': 'زمن استجابة أقل من 15 دقيقة',
+  'sv.c5.li2': 'تتبع GPS في الوقت الفعلي',
+  'sv.c5.li3': 'فرق تكتيكية منسقة',
+
+  'sv.c6.title': 'السلامة من الحرائق',
+  'sv.c6.desc': 'حماية المباني والمنشآت من الحرائق مع تدخل سريع وفعال.',
+  'sv.c6.li1': 'عملاء مدربون على حالات الطوارئ',
+  'sv.c6.li2': 'الوقاية والكشف المبكر',
+  'sv.c6.li3': 'تدخل فوري على مدار 24 ساعة',
+
+  'sv.c7.title': 'حراسة المستودعات',
+  'sv.c7.desc': 'المراقبة والتحكم في الوصول للمستودعات والمنشآت الصناعية ضد السرقة والتخريب.',
+  'sv.c7.li1': 'التحكم في المداخل والمخارج',
+  'sv.c7.li2': 'منع السرقة وأعمال التخريب',
+  'sv.c7.li3': 'مراقبة تدفق البضائع',
+
+  'sv.c8.title': 'سلامة مواقع البناء (BTP)',
+  'sv.c8.desc': 'حماية كاملة لمواقع البناء ضد السرقة والتخريب والوصول غير المصرح به.',
+  'sv.c8.li1': 'عملاء مدربون على تحديات BTP',
+  'sv.c8.li2': 'إدارة الطوارئ في الموقع',
+  'sv.c8.li3': 'حلول مكيفة لكل موقع بناء',
+
+  'sv.c9.title': 'التحكم عبر تتبع GPS',
+  'sv.c9.desc': 'مراقبة والتحكم في المركبات في الوقت الفعلي لتأمين أساطيلكم ومنشآتكم.',
+  'sv.c9.li1': 'تتبع GPS في الوقت الفعلي',
+  'sv.c9.li2': 'التحكم في وصول المركبات',
+  'sv.c9.li3': 'تقارير مراقبة مفصلة',
+
+  // SERVICES VIEW — excellence card
+  'sv.excel.title': 'تميز عملياتي معتمد',
+  'sv.excel.desc': 'يخضع عملاؤنا لتدريب دولي صارم لضمان أقصى قدر من الاستعداد العملياتي في أي بيئة.',
+  'sv.excel.response': 'الاستجابة',
+  'sv.excel.availability': 'التوافر',
+  'sv.excel.btn': 'طلب خطة تدخل',
+
+  // SERVICES VIEW — regional section
+  'sv.region.title': 'تأمين الأصول عبر جمهورية غينيا',
+  'sv.region.desc': 'من العاصمة كوناكري إلى الممرات الصناعية التعدينية الحيوية في بوكي وكامسار وما وراءها، تتمتع GIPS بموقع استراتيجي لتقديم دعم أمني فوري على مستوى البلاد.',
+  'sv.region.hqTitle': 'المقر الوطني',
+  'sv.region.hqLocation': 'كوناكري، جمهورية غينيا',
+  'sv.region.hubsTitle': 'المراكز الإقليمية',
+  'sv.region.mapLabel': 'منطقة الانتشار النشط لـ GIPS',
+
+  // ABOUT VIEW — hero
+  'av.hero.badge': 'هويتنا',
+  'av.hero.title': 'التميز والنزاهة في خدمة غينيا',
+  'av.hero.desc': 'قوة أمنية محلية بخبرة دولية، تحمي أصولكم الاستراتيجية في جميع أنحاء جمهورية غينيا.',
+
+  // ABOUT VIEW — stats
+  'av.stats.foundedLabel': 'سنة التأسيس',
+  'av.stats.agentsLabel': 'عملاء معتمدون',
+  'av.stats.prefLabel': 'المحافظات المغطاة',
+  'av.stats.survLabel': 'مراقبة نشطة',
+
+  // ABOUT VIEW — CEO spotlight
+  'av.ceo.label': 'لقاء مع المدير التنفيذي',
+  'av.ceo.name': 'السيد كوندي سليمان',
+  'av.ceo.jobTitle': 'الرئيس المدير العام',
+  'av.ceo.topLabel': 'قائد أمني',
+  'av.ceo.quote': '« مهمتنا هي إعادة تعريف معايير الأمن في غينيا من خلال الانضباط والاستباقية وخبرة محلية لا تضاهى. »',
+  'av.ceo.p1': 'تأسست في عام 2017، G.I.P.S هي نتيجة شراكة بين الشباب الغيني في غينيا والشتات الفرنسي — مدفوعة بالرغبة في تحسين الأمن في البلاد والمساهمة في خلق بيئة أكثر أمانًا للمستثمرين والمواطنين.',
+  'av.ceo.p2': 'تحت قيادة السيد كوندي سليمان، أصبحت GIPS شريكًا استراتيجيًا للشركات وشركات التعدين والمساكن الخاصة ومواقع البناء في جميع أنحاء جمهورية غينيا.',
+  'av.ceo.tag1': 'خبرة في التعدين',
+  'av.ceo.tag2': 'حماية VIP',
+  'av.ceo.tag3': 'ابتكار تكنولوجي',
+
+  // ABOUT VIEW — regional impact
+  'av.region.label': 'الأثر الإقليمي',
+  'av.region.title': 'مناطق التدخل',
+  'av.region.desc': 'تسمح لنا شبكتنا الإقليمية بالتدخل السريع في الأقاليم الطبيعية الأربعة لغينيا، مما يضمن استمرارية الخدمة دون انقطاع.',
+  'av.region.hub1Title': 'مركز كوناكري اللوجستي',
+  'av.region.hub1Desc': 'مركز قيادة مركزي يشرف على جميع العمليات الوطنية على مدار 24 ساعة.',
+  'av.region.hub2Title': 'ممر الأمن التعديني',
+  'av.region.hub2Desc': 'حماية متخصصة لمواقع الاستخراج والقوافل اللوجستية في غينيا العليا.',
+  'av.region.hub3Title': 'وحدات التدخل المتنقلة',
+  'av.region.hub3Desc': 'فرق استجابة سريعة جاهزة للانتشار في أي محافظة في غضون ساعتين.',
+  'av.region.seeAll': 'شاهد جميع مراكزنا الإقليمية',
+
+  // ABOUT VIEW — vision & mission
+  'av.vm.label': 'من نحن',
+  'av.vm.title': 'الرؤية والمهمة',
+  'av.vm.visionTitle': 'رؤيتنا',
+  'av.vm.visionDesc': 'نحن نناضل من أجل تحقيق الأمن الأمثل من خلال تقديم خدمات مخصصة وعالية الجودة لعملائنا وبيئتهم. GIPS لا تكتفي فقط بتلبية توقعات عملائها — نحن نسعى دائمًا لاستباقها لضمان راحة بالهم.',
+  'av.vm.missionTitle': 'مهمتنا',
+  'av.vm.missionDesc': 'نحن نطور استراتيجياتنا باستمرار للتميز في مجالنا ونصبح مرجعًا في مجال الأمن في مناطق عملياتنا. هذا يشهد على التزامنا بالتميز والأمن.',
+  'av.vm.secTitle': 'الأمن',
+  'av.vm.secDesc': 'تنشر فرقنا جميع الوسائل اللازمة لضمان أمن ممتلكاتكم وأشخاصكم.',
+  'av.vm.prevTitle': 'الوقاية',
+  'av.vm.prevDesc': 'نحن نوظف كل جهدنا لتوقع المخاطر والوقاية منها قبل وقوعها.',
+  'av.vm.protTitle': 'الحماية',
+  'av.vm.protDesc': 'نحن نضمن حماية موثوقة ومطمئنة في جميع الظروف.',
+
+  // ABOUT VIEW — clients
+  'av.clients.label': 'مراجعنا',
+  'av.clients.title': 'العملاء الرئيسيون',
+  'av.clients.ent': 'شركات',
+  'av.clients.entDesc': 'خدمات أمنية لشركات من مختلف القطاعات — التجارة والمالية والصناعة.',
+  'av.clients.res': 'مساكن خاصة',
+  'av.clients.resDesc': 'الأمن والمراقبة للمساكن الخاصة، بما في ذلك الدوريات وأنظمة الإنذار.',
+  'av.clients.min': 'شركات التعدين',
+  'av.clients.minDesc': 'خدمات أمنية لشركات التعدين الكبرى في غينيا في مواقع استغلالها.',
+
+  // ABOUT VIEW — timeline
+  'av.timeline.label': 'التطور',
+  'av.timeline.title': 'تاريخنا',
+  'av.timeline.y2017': 'التأسيس',
+  'av.timeline.y2017Desc': 'تأسست GIPS من قبل مهنيين ذوي خبرة — شراكة بين الشباب الغيني في غينيا والشتات الفرنسي.',
+  'av.timeline.y2019': 'التوسع في التعدين',
+  'av.timeline.y2019Desc': 'توقيع أول العقود الكبرى مع شركات التعدين الكبرى في غينيا.',
+  'av.timeline.y2021': 'تكنولوجيا متطورة',
+  'av.timeline.y2021Desc': 'دمج تتبع GPS، والمراقبة المتقدمة بالفيديو، والأمن الكلبي.',
+  'av.timeline.y2024': 'مرجع وطني',
+  'av.timeline.y2024Desc': 'أصبحت GIPS مرجعًا لا غنى عنه في مجال الأمن الخاص في غينيا.',
+
+  // ABOUT VIEW — team
+  'av.team.label': 'خبراؤنا',
+  'av.team.title': 'فريقنا من الخبراء المؤهلين',
+  'av.team.desc': 'تم اختيارهم وتدريبهم بعناية، يجمع خبراؤنا بين المهارة البشرية والتكنولوجيا المتطورة لحمايتكم.',
+  'av.team.agent': 'أفراد الأمن',
+  'av.team.agentDesc': 'تم اختيارهم وتدريبهم بعناية لضمان كفاءتهم وموثوقيتهم في جميع المواقف.',
+  'av.team.dog': 'كلاب الأمن',
+  'av.team.dogDesc': 'خدمات الأمن الكلبي لتعزيز الحماية والكشف في مواقعكم.',
+  'av.team.video': 'المراقبة بالفيديو',
+  'av.team.videoDesc': 'فنيون مدربون على مراقبة الأنظمة الأمنية والاستجابة السريعة لحالات الطوارئ.',
+
+  // ABOUT VIEW — partners
+  'av.partners.label': 'ثقة وتعاون',
+  'av.partners.title': 'شركاؤنا',
+  'av.partners.desc': 'تثق مؤسسات مرموقة في GIPS لأمن ممتلكاتهم وفرقهم.',
+
+  // CONTACT VIEW
+  'contact.badge': 'دعم 24/7',
+  'contact.title': 'اتصل بغينيا الدولية للأمن الخاص',
+  'contact.desc': 'فريق من المهنيين في خدمتكم لضمان حمايتكم وحماية ممتلكاتكم في جميع أنحاء غينيا.',
+  'contact.success': 'تم إرسال الرسالة!',
+  'contact.successDesc': 'تم فتح تطبيق البريد الخاص بك. سنرد عليك في أقرب وقت ممكن.',
+  'contact.sendAnother': 'إرسال رسالة أخرى',
+  'contact.nameLabel': 'الاسم الكامل',
+  'contact.phoneLabel': 'الهاتف',
+  'contact.emailLabel': 'البريد الإلكتروني',
+  'contact.msgLabel': 'رسالتك',
+  'contact.namePlaceholder': 'مثال: مامادو ديالو',
+  'contact.phonePlaceholder': '+224 620 00 00 00',
+  'contact.emailPlaceholder': 'votre@email.com',
+  'contact.msgPlaceholder': 'كيف يمكننا مساعدتك؟',
+  'contact.sending': 'جاري الإرسال...',
+  'contact.sendBtn': 'إرسال الرسالة',
+  'contact.privacy': 'بياناتكم آمنة وتُعالج بسرية تامة من قبل GIPS.',
+  'contact.hqTitle': 'المقر الرئيسي',
+  'contact.hqAddr': 'سونفونيا، كوناكري (أمام مركز سونفونيا الصحي)',
+  'contact.phoneTitle': 'الهاتف',
+  'contact.whatsappLabel': 'رسالة فورية',
+  'contact.whatsappTitle': 'تحدث معنا على واتساب',
+  'contact.mapTitle': 'مقرنا: سونفونيا، كوناكري',
+  'contact.openMaps': 'فتح في الخرائط',
+  'contact.submitError': 'حدث خطأ. يرجى المحاولة مرة أخرى.',
+
+  // QUOTE VIEW
+  'quote.title': 'طلب عرض سعر مجاني',
+  'quote.desc': 'احصل على حل أمني مخصص يتناسب مع الحقائق الميدانية في غينيا. بسيط وسريع وبدون التزام.',
+  'quote.step1Title': 'معلومات شخصية',
+  'quote.step2Title': 'تفاصيل المهمة',
+  'quote.step3Title': 'إتمام الطلب',
+  'quote.stepOf': 'خطوة {step} / {total}',
+  'quote.coordsTitle': 'معلومات الاتصال الخاصة بك',
+  'quote.nameLabel': 'الاسم الكامل',
+  'quote.companyLabel': 'الشركة / المؤسسة',
+  'quote.emailLabel': 'البريد الإلكتروني المهني',
+  'quote.phoneLabel': 'هاتف الاتصال',
+  'quote.namePlaceholder': 'مامادو ديالو',
+  'quote.companyPlaceholder': 'اسم الشركة (اختياري)',
+  'quote.emailPlaceholder': 'contact@entreprise.gn',
+  'quote.phonePlaceholder': '+224 620 00 00 00',
+  'quote.nextBtn': 'التالي',
+  'quote.step2OpTitle': 'تفاصيل عملياتية',
+  'quote.serviceLabel': 'نوع الخدمة',
+  'quote.serviceDefault': 'اختر خدمة',
+  'quote.locationLabel': 'الموقع',
+  'quote.locationDefault': 'اختر مدينة',
+  'quote.durationLabel': 'مدة العقد المطلوبة',
+  'quote.durationPlaceholder': 'مثال: 12 شهرًا، مهمة لمرة واحدة، أسبوعية...',
+  'quote.backBtn': 'رجوع',
+  'quote.step3FinalTitle': 'توضيحات نهائية',
+  'quote.detailsLabel': 'صِف احتياجاتك المحددة',
+  'quote.detailsPlaceholder': 'عدد الأفراد، مخاطر خاصة، معدات مطلوبة...',
+  'quote.consent': 'بإرسال هذا النموذج، فإنك توافق على معالجة بياناتك من قبل GIPS لإعداد عرض السعر الخاص بك. نحن نلتزم بالسرية التامة.',
+  'quote.sending': 'جاري الإرسال...',
+  'quote.finalBtn': 'إتمام الطلب',
+  'quote.successTitle': 'تم إرسال الطلب بنجاح!',
+  'quote.successDesc': 'شكرًا لك، {name}. لقد استلم خبراؤنا طلبك وسيتصلون بك في غضون 24 ساعة.',
+  'quote.backHome': 'العودة إلى الرئيسية',
+  'quote.whyGips': 'لماذا GIPS؟',
+  'quote.gipsPoint1': 'معايير جودة دولية مطبقة على الواقع الميداني المحلي.',
+  'quote.gipsPoint2': 'لوجستيات متطورة ومراقبة في الوقت الفعلي.',
+  'quote.gipsPoint3': 'عملاء معتمدون ويتم تحديث تدريبهم بانتظام.',
+  'quote.urgentTitle': 'هل تحتاج إلى مساعدة فورية؟',
+  'quote.urgentDesc': 'لأي طلب عاجل، اتصل مباشرة بمركزنا العملياتي في كوناكري.',
+  'quote.footerCopyright': '© 2026 GIPS غينيا.',
+  'quote.footerPrivacy': 'الخصوصية',
+  'quote.footerTerms': 'الشروط',
+  'quote.footerSupport': 'دعم 24/7',
+  'quote.err.nameRequired': 'الاسم الكامل مطلوب.',
+  'quote.err.emailRequired': 'البريد الإلكتروني مطلوب.',
+  'quote.err.emailInvalid': 'يرجى إدخال بريد إلكتروني صحيح.',
+  'quote.err.phoneRequired': 'رقم الهاتف مطلوب.',
+  'quote.err.phoneInvalid': 'تنسيق الهاتف غير صحيح (8 أرقام على الأقل).',
+  'quote.err.serviceRequired': 'يرجى اختيار نوع الخدمة.',
+  'quote.err.locationRequired': 'يرجى اختيار الموقع.',
+  'quote.err.durationRequired': 'يرجى تحديد المدة.',
+  'quote.err.detailsRequired': 'يرجى تقديم بعض التفاصيل عن احتياجاتك.',
+  'quote.err.detailsMinLength': 'يرجى أن تكون أكثر دقة (10 أحرف على الأقل).',
+  'quote.err.submit': 'حدث خطأ. يرجى المحاولة مرة أخرى.',
+
+  // SERVICE & LOCATION OPTIONS (quote form)
+  'serviceOpt.gardiennage': 'حراسة سكنية / تجارية',
+  'serviceOpt.evenementiel': 'أمن الفعاليات',
+  'serviceOpt.industriel': 'صناعي / تعديني',
+  'serviceOpt.vip': 'حماية VIP ومرافقة',
+  'serviceOpt.patrouille': 'دورية متنقلة وتدخل',
+  'locationOpt.conakry': 'كوناكري (العاصمة)',
+  'locationOpt.kamsar': 'كامسار',
+  'locationOpt.boke': 'بوكي',
+  'locationOpt.kankan': 'كانكان',
+  'locationOpt.autre': 'آخرى (حدد في التفاصيل)',
+
+  // TRAINING VIEW
+  'tv.hero.badge': 'التميز في التدريب الأمني',
+  'tv.hero.title': 'رفع مستوى الاحتراف من خلال التدريب',
+  'tv.hero.desc': 'تقدم أكاديميتنا أعلى مستوى من التعليم الأمني، حيث تجمع بين النظرية والعمليات الميدانية المكثفة لإعداد خبراء الغد.',
+  'tv.courses.label': 'برامجنا',
+  'tv.courses.title': 'تدريب متطور',
+  'tv.course1.title': 'حراسة النخبة',
+  'tv.course1.desc': 'التقنيات الأساسية لحماية المواقع، والتحكم في الوصول، والأخلاقيات المهنية.',
+  'tv.course2.title': 'التكتيك والدفاع',
+  'tv.course2.desc': 'القتال القريب، والمناورات الدفاعية المتقدمة، وتخفيف التهديدات.',
+  'tv.course3.title': 'وحدة الكلاب (K9)',
+  'tv.course3.desc': 'شهادة مهنية للعمل مع كلاب الأمن من النخبة.',
+  'tv.course4.title': 'غرفة التحكم',
+  'tv.course4.desc': 'إتقان تقنيات CCTV، والمراقبة عن بعد، والكشف عن الحوادث.',
+  'tv.course5.title': 'حماية VIP',
+  'tv.course5.desc': 'بروتوكولات متخصصة للأمن رفيع المستوى والنقل الآمن.',
+  'tv.cta.title': 'جاهز لبدء تدريبك؟',
+  'tv.cta.desc': 'انضم إلى نخبة الأمن في غينيا. اتصل بمركز التدريب الخاص بنا اليوم.',
+  'tv.cta.btn': 'سجل الآن',
+  'tv.phil.quote': "“نحن لا ندرب حراس أمن فقط؛ نحن نصنع مدافعين محترفين عن الحياة والممتلكات.”",
+  'tv.phil.desc': "في أكاديمية GIPS، فلسفتنا متجذرة في الانضباط والدقة التكتيكية والالتزام الأخلاقي العميق. يحمل كل خريج علامة التميز التي تميز مؤسستنا.",
+
+  // TEAM VIEW
+  'tm.hero.badge': 'خبراؤنا',
+  'tm.hero.title': 'نخبة الأمن في غينيا',
+  'tm.hero.desc': 'تعرف على الرجال والنساء المتفانين الذين يضمنون حمايتكم يوميًا بصرامة واحترافية.',
+  'tm.leadership.title': 'الإدارة العامة',
+  'tm.specialized.title': 'الوحدات المتخصصة',
+  'tm.recruitment.title': 'انضم إلى النخبة',
+  'tm.recruitment.desc': 'هل لديك حس الواجب والانضباط؟ توظف GIPS أفضل المواهب لتعزيز فرقها.',
+  'tm.recruitment.btn': 'قدّم الآن',
+};
+
+export const translations = { fr, en, es, zh, ar };

@@ -61,8 +61,8 @@ export const TrainingView: React.FC = () => {
             </div>
             
             {/* Abstract Background Shapes */}
-            <div className="absolute top-0 right-0 w-64 h-64 bg-primary/20 rounded-full blur-[100px] -mr-32 -mt-32 animate-pulse"></div>
-            <div className="absolute bottom-0 left-0 w-64 h-64 bg-guinea-yellow/10 rounded-full blur-[100px] -ml-32 -mb-32 animate-pulse" style={{ animationDelay: '1s' }}></div>
+            <div className="absolute top-0 end-0 w-64 h-64 bg-primary/20 rounded-full blur-[100px] -me-32 -mt-32 animate-pulse"></div>
+            <div className="absolute bottom-0 start-0 w-64 h-64 bg-guinea-yellow/10 rounded-full blur-[100px] -ms-32 -mb-32 animate-pulse" style={{ animationDelay: '1s' }}></div>
           </div>
         </div>
       </div>
@@ -90,13 +90,13 @@ export const TrainingView: React.FC = () => {
               </div>
               
               {/* Highlight line */}
-              <div className="absolute bottom-0 left-0 h-1 bg-primary w-0 group-hover:w-full transition-all duration-500"></div>
+              <div className="absolute bottom-0 start-0 h-1 bg-primary w-0 group-hover:w-full transition-all duration-500"></div>
             </div>
           ))}
 
           {/* CTA Card */}
           <div className="flex flex-col gap-6 rounded-2xl bg-gradient-to-br from-primary to-primary-dark p-8 text-white shadow-2xl justify-center relative overflow-hidden group border border-white/10">
-            <div className="absolute -right-10 -bottom-10 size-48 bg-white/10 rounded-full blur-3xl group-hover:scale-125 transition-transform duration-700"></div>
+            <div className="absolute -end-10 -bottom-10 size-48 bg-white/10 rounded-full blur-3xl group-hover:scale-125 transition-transform duration-700"></div>
             <div className="z-10 flex flex-col gap-4">
               <h4 className="text-3xl font-black leading-tight tracking-tight">{t('tv.cta.title')}</h4>
               <p className="text-white/80 text-base leading-relaxed">
@@ -114,7 +114,7 @@ export const TrainingView: React.FC = () => {
       <div className="w-full bg-background-light px-6 md:px-20 lg:px-40 py-24 mb-20 border-y border-primary/5">
         <div className="max-w-4xl mx-auto text-center space-y-8">
             <h3 className="text-3xl md:text-4xl font-black text-[#111318] italic leading-tight">
-              "We don't just train security guards; we forge professional defenders of life and property."
+              {t('tv.phil.quote')}
             </h3>
             <div className="flex justify-center gap-2">
                 {[1, 2, 3].map(i => (
@@ -122,7 +122,7 @@ export const TrainingView: React.FC = () => {
                 ))}
             </div>
             <p className="text-slate-600 text-lg font-medium leading-relaxed">
-              At GIPS Academy, our philosophy is rooted in discipline, tactical precision, and deep ethical commitment. Every graduate carries the mark of excellence that defines our institution.
+              {t('tv.phil.desc')}
             </p>
         </div>
       </div>

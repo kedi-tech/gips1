@@ -7,10 +7,11 @@ import { AboutView } from './components/AboutView';
 import { ContactView } from './components/ContactView';
 import { QuoteView } from './components/QuoteView';
 import { TrainingView } from './components/TrainingView';
+import { TeamView } from './components/TeamView';
 import { Footer } from './components/Footer';
 import { LanguageProvider } from './i18n/LanguageContext';
 
-export type View = 'home' | 'services' | 'about' | 'contact' | 'quote' | 'training';
+export type View = 'home' | 'services' | 'about' | 'contact' | 'quote' | 'training' | 'team';
 
 export default function App() {
   const [view, setView] = useState<View>('home');
@@ -24,6 +25,7 @@ export default function App() {
           {view === 'services' && <ServicesView />}
           {view === 'about' && <AboutView />}
           {view === 'training' && <TrainingView />}
+          {view === 'team' && <TeamView />}
           {view === 'contact' && <ContactView />}
           {view === 'quote' && <QuoteView onBack={() => setView('home')} />}
         </main>

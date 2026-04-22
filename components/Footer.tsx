@@ -4,7 +4,7 @@ import { IMAGES } from '../constants';
 import { useLanguage } from '../i18n/LanguageContext';
 
 interface FooterProps {
-  setView?: (view: 'home' | 'services' | 'about' | 'contact' | 'training') => void;
+  setView?: (view: 'home' | 'services' | 'about' | 'contact' | 'training' | 'team') => void;
 }
 
 export const Footer: React.FC<FooterProps> = ({ setView }) => {
@@ -35,6 +35,7 @@ export const Footer: React.FC<FooterProps> = ({ setView }) => {
               <ul className="space-y-2 text-white/60 text-sm">
                 <li><button onClick={() => setView?.('home')} className="hover:text-white transition-colors">{t('footer.home')}</button></li>
                 <li><button onClick={() => setView?.('about')} className="hover:text-white transition-colors">{t('footer.about')}</button></li>
+                <li><button onClick={() => setView?.('team')} className="hover:text-white transition-colors">{t('nav.team')}</button></li>
                 <li><button onClick={() => setView?.('training')} className="hover:text-white transition-colors">{t('nav.formation')}</button></li>
                 <li><a className="hover:text-white" href="#">{t('footer.careers')}</a></li>
               </ul>
@@ -60,7 +61,7 @@ export const Footer: React.FC<FooterProps> = ({ setView }) => {
             </div>
           </div>
         </div>
-        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
+        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-start">
           <p className="text-white/40 text-xs">{t('footer.copyright')}</p>
           <div className="flex gap-6">
             <a className="text-white/60 hover:text-white transition-colors" href="#"><span className="material-symbols-outlined">social_leaderboard</span></a>

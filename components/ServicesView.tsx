@@ -78,7 +78,7 @@ export const ServicesView: React.FC = () => {
           <div className="group relative flex flex-col gap-4 rounded-2xl border border-primary/10 bg-white overflow-hidden hover:shadow-2xl transition-all duration-500 h-full">
             <div className="h-48 w-full overflow-hidden">
               <img alt={t('sv.c3.title')} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src={IMAGES.INDUSTRIAL_IMG} />
-              <div className="absolute top-0 left-0 w-full h-48 bg-gradient-to-t from-white to-transparent"></div>
+              <div className="absolute top-0 start-0 w-full h-48 bg-gradient-to-t from-white to-transparent"></div>
             </div>
             <div className="p-8 pt-0 flex flex-col gap-3">
               <h4 className="text-[#111318] text-2xl font-extrabold leading-tight">{t('sv.c3.title')}</h4>
@@ -189,7 +189,7 @@ export const ServicesView: React.FC = () => {
 
           {/* Excellence card */}
           <div className="flex flex-col gap-6 rounded-2xl bg-primary p-8 text-white shadow-2xl justify-center relative overflow-hidden group">
-            <div className="absolute -right-10 -bottom-10 size-48 bg-white/10 rounded-full blur-3xl group-hover:scale-125 transition-transform duration-700"></div>
+            <div className="absolute -end-10 -bottom-10 size-48 bg-white/10 rounded-full blur-3xl group-hover:scale-125 transition-transform duration-700"></div>
             <div className="z-10 flex flex-col gap-4">
               <h4 className="text-3xl font-black leading-tight">{t('sv.excel.title')}</h4>
               <p className="text-white/80 text-base leading-relaxed">{t('sv.excel.desc')}</p>
@@ -239,9 +239,9 @@ export const ServicesView: React.FC = () => {
           <div className="flex-1 w-full h-[450px] rounded-3xl overflow-hidden bg-slate-200 shadow-2xl relative group border-8 border-white">
             <div className="absolute inset-0 bg-primary/10 mix-blend-multiply opacity-20"></div>
             <img alt="Carte de la Guinée" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" src={IMAGES.MAP_SERVICES} />
-            <div className="absolute top-1/2 left-1/3 size-6 bg-primary rounded-full animate-ping opacity-75"></div>
-            <div className="absolute top-1/2 left-1/3 size-6 bg-primary rounded-full border-4 border-white shadow-xl"></div>
-            <div className="absolute bottom-6 left-6 bg-white/90 backdrop-blur px-4 py-2 rounded-lg text-xs font-bold text-primary shadow-lg">{t('sv.region.mapLabel')}</div>
+            <div className="absolute top-1/2 start-1/3 size-6 bg-primary rounded-full animate-ping opacity-75"></div>
+            <div className="absolute top-1/2 start-1/3 size-6 bg-primary rounded-full border-4 border-white shadow-xl"></div>
+            <div className="absolute bottom-6 start-6 bg-white/90 backdrop-blur px-4 py-2 rounded-lg text-xs font-bold text-primary shadow-lg">{t('sv.region.mapLabel')}</div>
           </div>
         </div>
       </div>

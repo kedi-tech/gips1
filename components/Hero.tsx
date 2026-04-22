@@ -43,7 +43,7 @@ export const Hero: React.FC<HeroProps> = ({ setView }) => {
               <button
                 onClick={() => window.open('https://wa.me/224628751875', '_blank')}
                 className="flex min-w-[180px] cursor-pointer items-center justify-center rounded-lg h-12 px-6 bg-[#25D366] text-white text-sm font-bold hover:scale-105 transition-all shadow-xl shadow-green-500/20">
-                <span className="material-symbols-outlined mr-2">chat</span>
+                <span className="material-symbols-outlined me-2">chat</span>
                 WhatsApp
               </button>
               <button
@@ -75,12 +75,12 @@ export const Hero: React.FC<HeroProps> = ({ setView }) => {
       <div className="relative flex-1 min-h-[20vh] md:min-h-[20vh] overflow-hidden">
         <img
           alt="Sécurité GIPS - Votre sécurité, notre priorité"
-          className="w-full h-full object-cover object-right"
+          className="w-full h-full object-cover object-right rtl:object-left"
           src={IMAGES.HERO}
         />
         <div
           className="absolute inset-0 pointer-events-none"
-          style={{ background: 'linear-gradient(to right, #101622 0%, #101622 15%, transparent 55%)' }}
+          style={{ background: 'linear-gradient(to inline-end, #101622 0%, #101622 15%, transparent 55%)' }}
           aria-hidden
         />
       </div>
