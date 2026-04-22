@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { IMAGES } from '../constants';
+import { useLanguage } from '../i18n/LanguageContext';
 
 const PARTNERS = [
   { src: IMAGES.PARTNER_BSIC, name: "BSIC" },
@@ -12,11 +13,13 @@ const PARTNERS = [
 ];
 
 export const PartnersSection: React.FC = () => {
+  const { t } = useLanguage();
+
   return (
     <section className="bg-white py-16 px-6 md:px-20 border-t border-charcoal/5">
       <div className="max-w-7xl mx-auto">
         <p className="text-center text-xs font-bold uppercase tracking-[0.3em] text-gray-400 mb-10">
-          Ils nous font confiance — Nos Partenaires
+          {t('partners.label')}
         </p>
         <div className="flex flex-wrap items-center justify-center gap-6 lg:gap-10">
           {PARTNERS.map((partner) => (
